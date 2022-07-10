@@ -13,30 +13,40 @@ import {
   SettingsSystemDaydreamOutlined,
   Store,
 } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Ahuman</span>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <span className="logo">Ahuman</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashbord</span>
-          </li>
+          <Link to={"/"} style={{ textDecoration: "none" }}>
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Dashbord</span>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
-          <li>
-            <PersonOutline className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <Store className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to={"/users"} style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutline className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+
+          <Link to={"/products"} style={{ textDecoration: "none" }}>
+            <li>
+              <Store className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <CreditCard className="icon" />
             <span>Orders</span>
@@ -68,10 +78,12 @@ const Sidebar = () => {
             <span>Settings</span>
           </li>
           <p className="title">USER</p>
-          <li>
-            <AccountCircleOutlined className="icon" />
-            <span>Profile</span>
-          </li>
+          <Link to={"/products/test"} style={{ textDecoration: "none" }}>
+            <li>
+              <AccountCircleOutlined className="icon" />
+              <span>Profile</span>
+            </li>
+          </Link>
           <li>
             <ExitToApp className="icon" />
             <span>Logout</span>
