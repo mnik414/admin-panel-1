@@ -23,15 +23,26 @@ const Datatable = () => {
   ];
 
   return (
+    <div className="tt">
     <div className="datatable">
+      <div className="datatableTitle">
+        Add new user
+        <Link to={"/users/new"}
+        className='link'
+        >
+          Add New
+        </Link>
+      </div>
       <DataGrid
+      className="datagrid"
         rows={userRows}
         columns={userColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
-      />
+        />
     </div>
+        </div>
   );
 };
 

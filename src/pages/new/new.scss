@@ -58,9 +58,9 @@
               border: none;
               border-bottom: 1px solid gray;
 
-            }
-            input:focus{
-              outline: none;
+              &:focus {
+                outline: none;
+              }
             }
           }
 
